@@ -1,2 +1,2 @@
 # IKGC
-International Knowledge Graph Challenge
+International Knowledge Graph Reasoning Challenge
