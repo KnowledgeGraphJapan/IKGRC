@@ -35,7 +35,7 @@
       <!-- グローバルナビゲーション -->
       <nav class="gnav" id="js_gnav">
         <ul class="gnav-ul">
-          <li class="current"><a href="application.html">How to Apply</a></li>
+          <li class="current"><a href="application.html">Call For Papers<br>/How to Apply</a></li>
           <li><a target="_blank" href="https://github.com/KnowledgeGraphJapan/KGRC-RDF">Knowledge Graph</a></li>
           <li><a href="sample.html">Sample<br>Approach</a></li>
           <li><a href="reference.html">Reference Materials<br>for Beginners</a></li>
@@ -52,35 +52,47 @@
 <main class="main-contents" id="main-contents"> <!-- InstanceBeginEditable name="content" -->
 <div class="key-common">
   <div class="key-common-inner">
-    <h1 class="ttl">How to Apply</h1>
+    <h1 class="ttl">Call For Papers/How to Apply</h1>
   </div>
 </div>
   <div class="inner">
-	  <h2 class="h02">How to Apply</h2>
+	  <h2 class="h02">Call for Papers<br>/How to Apply</h2>
 	  <div class="contents">
 		  <section>
-			  <p style="color:red;"><b>TBD<br>(Please see below for information about last year's challenge.)</b></p>
+			  <!-- <p style="color:red;"><b>TBD<br>(Please see below for information about last year's challenge.)</b></p> -->
 		  <h3 class="h03">Challenge Goal</h3>
-		  <p>This Challenge aims to promote the development of AI system that can explain the reason for the conclusion.</p>
+		  <p>Recent advances in machine learning have led to the application of artificial intelligence (AI) technology to a variety of social problems. Accordingly, being able to explain the reason for an AI decision is becoming important to ensure the secure and safe use of AI techniques.</p> 
+		<p>On this background, the Knowledge Graph Reasoning Challenge has been organized from 2018 in Japan. It 	aims to promote techniques for explainable AI using knowledge graphs.
+		In the challenge, the task is to estimate the murderer with a reasonable explanation using a dataset of knowledge graphs representing eight Sherlock Holmes mystery stories. The challenge has been held four times in Japan, and 24 approaches have been proposed and fruitfully discussed, including approaches to solving the constraint satisfaction problem, logical inference, and machine learning techniques including knowledge graph embedding.</p>
+		<br>
+	<p>In the workshop, we would like to organize <b>the First International Knowledge Graph Reasoning Challenge (IKGRC 2023)</b> to discuss a wider variety of knowledge graph reasoning technologies for explainable AI.
+			</p>
 		  </section>
 		  <section>
 		  <h3 class="h03">Challenge Task</h3>
 		  <p>The subject set for the Challenge is the cases in Sherlock Holmes short stories in which Holmes solved mysterious crimes.<br>
 			The task is to reason and/or estimate the truth of the case while providing a reasonable explanation based on the relevant open <a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF">knowledge graphs.</a><br>
 			The right answer of the task is to arrive at the same conclusion as Holmes, that is, to explain the truth of the case that Holmes solved.<br>
-<br>
-			  <span class="h04">Update history</span><br>
+			<br>
+			We are soliciting entries for the dataset in the following three divisions.
+			  <!-- 
+				<span class="h04">Update history</span><br>
 			  In addition to the knowledge graph of “the Speckled Band” provided for Challenge 2018, we provided the knowledge graphs of four additional stories; “The Devil's Foot,” “A Case of Identity,” “The Crooked Man” and “The Dancing Men.” The entrants can use all the five graphs or just one of them as their choice.<br>
               <b>In Challenge 2019</b>, a new Tool Category Prize will be awarded. In the Tool Category, submissions can be the development of a tool with which a task is partially solved.<br>
 			  For example: estimation of the criminal, review of the alibis, explanation of the motives, etc.<br>
 			  　　*Submissions of tool that supports knowledge graph construction by “triplification of natural language“ are also acceptable.<br>
               <b>In Challenge 2020</b>, we provided the knowledge graphs of three additional stories; "The Abbey Grange," "The Resident Patient," and "Silver Blaze."<br>
               <b>In Challenge 2021</b>, we held <a href="https://kgr4xai.ikgrc.org/" <target="_blank">KGR4XAI: The 1st International Workshop on Knowledge Graph Reasoning for Explainable Artificial Intelligence co-located with 10th International Joint Conference on Knowledge Graphs (IJCKG 2021)</a>. In addition to this workshop, we held the 1st Knowledge Graph Reasoning Challenge for Students.<br>
-              <b>In Challenge 2022</b>, we will hold the 1st International Knowledge Graph Reasoning Challenge.
+              <b>In Challenge 2022</b>, we will hold the 1st International Knowledge Graph Reasoning Challenge. -->
           </p>
+		  <ul class="ul01">
+			<li>(1) Main track: Development of a system that leads to one or more culprits in one or more of the target novels.</li>
+			<li>(2) Tool track: Development of tools to solve partial tasks required in the process of finding the culprit, e.g., suspect estimation, alibi verification, motive explanation, etc.</li>
+			<li>(3) Idea track: Ideas for how to realize 1 and 2 (without implementation)</li>
+			</ul>
 		  </section>
 		  <section>
-		  <h3 class="h03">Story-specific Tasks</h3>
+		  <h3 class="h03">Target Novels and Tasks</h3>
 		  <p>The Speckled Band: Who killed Julia? (criminal &amp; explanation)<br>
 			The Devil's Foot: Who killed the victims? (criminal &amp; explanation)<br>
 			A Case of Identity: Why did the bridegroom disappear? (explanation)<br>
@@ -103,17 +115,25 @@
 			  </ul>
 
 		  </section>
-		  <section>
+		  <!-- <section>
 		  <h3 class="h03">Categories</h3>
 			  <ul class="ul01"><li>(1) Main Category: development of a system that can accomplish the task of one or more subject stories</li>
 <li>(2) Tool Category: development of a tool with which a task can be partially solved<br>
 	For example: estimation of the criminal, review of the alibis, explanation of the motives, etc.<br>
 	* Submissions of tool that supports knowledge graph construction by "triplification of natural language" are also acceptable.</li>
 				  <li>(3) Idea Category: development of idea to realize (1) or (2) (no actual implementation is necessary)</li></ul>
-		  </section>
+		  </section> -->
 		  <section>
 		  <h3 class="h03">Submissions</h3>
-		 <p>Provide the following information in line with the entry form (<a href="../file/kgrc_application.doc">doc</a>, <a href="../file/kgrc_application.pdf">pdf</a>).<br>
+		  <ul class="ul01">
+			<li>1. Please submit a short paper (2 pages, IEEE format) with an outline of each of the submitted categories by [November 30, 2022]. Systems and tools may be under development. After peer review, accepted papers will be published in the Proceedings of the ICSC.
+			</li>
+			<li>2. If your paper is accepted, you will be required to send us materials (details of the materials will be provided separately) explaining your system, tools, and ideas at least two weeks before the IKGRC 2023 (either February 1-3, 2023) .
+			</li>
+			<li>3. On the day of the challenge, you will be asked to present your system, tool, or idea with a demonstration (online participation is possible). Prizes will be awarded to the best entries.
+			</li>
+		</ul>
+		 <!-- <p>Provide the following information in line with the entry form (<a href="../file/kgrc_application.doc">doc</a>, <a href="../file/kgrc_application.pdf">pdf</a>).<br>
 <span class="h04">The Challenge consists of three categories: Main Category, Tool Category and Idea Category. To apply for Idea Category, submit (1), (2) and (4) below only.</span></p>
 			  <ul class="ul01"><li>(1) Personal profile</li>
 				  <li>(2) Explanation of the reasoning/estimating process
@@ -131,8 +151,9 @@
 				  <p>-With the entrants’ consent, their entry forms and programs may be published on the website of the Knowledge Graph Reasoning Challenge*. Please give written consent in the entry form.</p>
 				  <ul class="ul03"><li>*Part of submitted materials may also be used in events related to Knowledge Graph Reasoning Challenge.</li>
 <li><span class="h04">*Submit the completed entry form in PDF through e-mail. (Any software can be used to make a form)<br>
-	Email address：kgrc@knowledge-graph.jp</span></li></ul>
+	Email address：kgrc@knowledge-graph.jp</span></li></ul> -->
 		  </section>
+
 		  <section>
 		  <h3 class="h03">Evaluation Criteria (Details to be announced)</h3>
 			  <ul class="ul01 mb1"><li>1. Can the approach reproduce Holmes’s reasoning?</li>
