@@ -59,7 +59,7 @@
 <!-- InstanceBeginEditable name="toppage" -->
 
 <!-- InstanceEndEditable -->
-<main class="main-contents" id="main-contents"> <!-- InstanceBeginEditable name="content" -->
+<main class="main-contents" id="main-contents">
     <div class="key-common">
         <div class="key-common-inner">
             <h1 class="ttl">Data Set</h1>
@@ -71,9 +71,9 @@
             <section>
                 <h3 class="h03">Table of Contents</h3>
                 <ol>
-                    <li><a href="#use">How to Use the Knowledge Graph and Videos</a></li>
-                    <li><a href="#schema">Structure of the Knowledge Graph</a></li>
-                    <li><a href="#query">Sample SPARQL Queries</a></li>
+                    <li><a href="#use" target="_blank">How to Use the Knowledge Graph and Videos</a></li>
+                    <li><a href="#schema" target="_blank">Structure of the Knowledge Graph</a></li>
+                    <li><a href="#query" target="_blank">Sample SPARQL Queries</a></li>
                 </ol>
             </section>
             <section>
@@ -81,72 +81,64 @@
                 <h4 class="h04">GitHub</h4>
                 <p>The knowledge graph is published in Resource Description Framework (RDF) format on GitHub. Corresponding videos are also available.</p>
                 <p><a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF/tree/kgrc4si" target="_blank">https://github.com/KnowledgeGraphJapan/KGRC-RDF/tree/kgrc4si</a></p>
-                <p>Videos: <a href="https://kgrc4si.ml/movies/" target="_blank">https://kgrc4si.ml/movies/</a> or in zip format:<a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags" target="_blank">https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags</a></p>
-                <br>
+                <p>The Knowledge Graph is available in TTL format and in N-TRIPLE format for easy handling as a machine learning data set.</p>
+                <p>Videos: <a href="https://kgrc4si.home.kg/Movie/" target="_blank">https://kgrc4si.home.kg/Movie/</a> or in zip format:<a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags" target="_blank">https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags</a></p>
+                <p>Scene graph data for video is also available on Github in the ActionGenome format.</p>
+
                 <h4 class="h04">Viewing the Knowledge Graph in a Web Browser</h4>
-                <p class="mb2">You can view the knowledge graph in a web browser. It is available at <a href="https://kgrc4si.ml:7200/" target="_blank">https://kgrc4si.ml:7200/</a>, please refer to the GraphDB <a href="https://graphdb.ontotext.com/documentation/10.0/workbench.html">manual</a> for more details.</p>
+                <p class="mb2">You can view the knowledge graph in a web browser. It is available at <a href="https://kgrc4si.home.kg:7200/" target="_blank">https://kgrc4si.home.kg:7200/</a>, please refer to the GraphDB <a href="https://graphdb.ontotext.com/documentation/10.0/workbench.html" target="_blank">manual</a> for more details.</p>
                 <h4 class="h04">SPARQL Endpoint</h4>
                 <p class="mb2">We provide an endpoint for searching the knowledge graph using SPARQL queries. Please refrain from making a large number of inquiries that could overload the server.
-                    <b>Using as an API</b> <br>
+                    <b>Using as an API</b>
                     Parameters: query={URL-encoded SPARQL query}, format={data format (json, xml, csv, ...)}
                 <ol>
-                    <li><a href="https://kgrc4si.ml:7200/repositories/KGRC4SIv04" target="_blank">https://kgrc4si.ml:7200/repositories/KGRC4SIv04</a></li>
+                    <li><a href="https://kgrc4si.home.kg:7200/repositories/KGRC4SIv05" target="_blank">https://kgrc4si.ml:7200/repositories/KGRC4SIv04</a></li>
                 </ol>
-                </p><br>
+                </p>
 
                 <h4 class="h04">Example Using Python (rdflib) in Google Colaboratory</h4>
                 <p class="mb2">Here is an example of using the above SPARQL endpoint with a program (Python) in Google Colab. The same applies to your own Jupyter notebook.
                 <ol>
                     <li>
-                        <a href="https://colab.research.google.com/github/takanori-ugai/Challenge/blob/master/Sample0.ipynb">Execution Example Using Python (rdflib)</a>
+                        <a href="https://colab.research.google.com/github/takanori-ugai/Challenge/blob/master/Sample0.ipynb" target="_blank">Execution Example Using Python (rdflib)</a>
                     </li>
                 </ol>
             </section>
             <section>
                 <h3 class="h03" id="schema">Structure of the Knowledge Graph</h3>
 
-                <p>The knowledge graph provided for the reasoning challenge is expressed with "events" and corresponding "actions," "main objects," "target objects," "agents," "relationships between scenes (nextEvent)," "times," etc. Please see the slides below for more details.</p><br>
+                <p>The knowledge graph provided for the reasoning challenge is expressed with "events" and corresponding "actions," "main objects," "target objects," "agents," "relationships between scenes (nextEvent)," "times," etc. Please see the slides below for more details.</p>
                 <div class="png">
                     <ul>
-                        <li><img src="SWRLExample/Slide1.PNG"/></li>
-                        <li><img src="SWRLExample/Slide2.PNG"/></li>
-                        <li><img src="SWRLExample/Slide3.PNG"/></li>
+                        <li>Schema (correspondence with video)<BR><img src="SWRLExample/Slide1.PNG" alt="Slide 1"/></li>
+                        <li>Example of Knowledge Graph<BR><img src="SWRLExample/Slide2.PNG" alt="Slide 2"/></li>
+                        <li><img src="SWRLExample/Slide3.jpg" alt="Slide 3"/></li>
                     </ul>
                 </div>
-
-
             </section>
 
             <section>
                 <h3 class="h03" id="query">Sample SPARQL Queries</h3>
                 <h4 class="h04">Retrieve events during the activity of "browsing the internet"</h4>
-                <p>
-                    <code class="prettyprint lang-sparql">
-                        PREFIX ex: <http://kgrc4si.ml/virtualhome2kg/instance/><br>
-                        PREFIX vh2kg: <http://kgrc4si.ml/virtualhome2kg/ontology/><br>
-                        select DISTINCT * where {<br>
-                        ex:browse_internet_scene1 vh2kg:hasEvent ?event .<br>
-                        ?event vh2kg:action ?action .<br>
-                        }
-                    </code>
-                    　　　　　　　　　　<br>
-                </p><br>
+                <pre><code class="prettyprint lang-sparql">
+PREFIX ex: <http://kgrc4si.home.kg/virtualhome2kg/instance/>
+PREFIX vh2kg: <http://kgrc4si.home.kg/virtualhome2kg/ontology/>
+SELECT DISTINCT * WHERE {
+  ex:browse_internet_scene1 vh2kg:hasEvent ?event .
+  ?event vh2kg:action ?action .
+}
+                </code></pre>
                 <h4 class="h04">Retrieve a list of activities</h4>
-                <p>
-                    <code class="prettyprint lang-sparql">
-                        PREFIX ex: <http://kgrc4si.ml/virtualhome2kg/instance/><br>
-                        PREFIX vh2kg: <http://kgrc4si.ml/virtualhome2kg/ontology/><br>
-                        select DISTINCT * where {<br>
-                        ?activity vh2kg:virtualHome ex:scene1 .<br>
-                        }
-                    </code>
-                </p>
-                <br>
+                <pre><code class="prettyprint lang-sparql">
+PREFIX ex: <http://kgrc4si.home.kg/virtualhome2kg/instance/>
+PREFIX vh2kg: <http://kgrc4si.home.kg/virtualhome2kg/ontology/>
+SELECT DISTINCT * WHERE {
+  ?activity vh2kg:virtualHome ex:scene1 .
+}
+                </code></pre>
             </section>
         </div>
     </div>
-    <!-- / .inner -->
-    <!-- InstanceEndEditable -->
 </main>
 
 
