@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/jp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Knowledge Graph Publication | Knowledge Graph Reasoning Challenge</title>
+    <!-- InstanceEndEditable -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap&subset=japanese"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceParam name="pageId" type="text" value="sample" -->
+    <!-- InstanceParam name="indexId" type="text" value="" -->
+</head>
+<body id="sample">
+<!-- InstanceBeginEditable name="bodyTop" --><!-- InstanceEndEditable -->
+<!-- サイドオープン時メインコンテンツを覆う -->
+<div class="overlay" id="js__overlay"></div>
+<!-- メインコンテンツ -->
+<div id="wrapper" class="wrapper"><!-- InstanceBeginEditable name="pageImg" --><!-- InstanceEndEditable -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-logo"><a href="index_ja.html"> <img class="rpimg" src="assets/img/common/logo.png"
+                                                                   alt="ナレッジグラフ推論チャレンジ"/> </a></div>
+            <!-- 開閉用　ボタン -->
+            <div class="nav_toggle" id="js__sideMenuBtn">
+                <div class="ellipsis-v"><span class="point top"></span> <span class="point mid"></span> <span
+                        class="point bot"></span></div>
+            </div>
+            <!-- グローバルナビゲーション -->
+            <nav class="gnav" id="js_gnav">
+                <ul class="gnav-ul">
+                    <li>
+                        <a href="application.html">Application<br/>Guidelines</a>
+                    </li>
+                    <li>
+                        <a href="rdf.html">Knowledge Graph</a>
+                    </li>
+                    <li>
+                        <a href="history.html">Past Events</a>
+                    </li>
+                    <li>
+                        <a href="index_ja.html">日本語</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- .headerInner -->
+    </header>
+</div>
+<!-- InstanceBeginEditable name="toppage" -->
+
+<!-- InstanceEndEditable -->
+<main class="main-contents" id="main-contents">
+    <div class="key-common">
+        <div class="key-common-inner">
+            <h1 class="ttl">Data Set</h1>
+        </div>
+    </div>
+    <div class="inner">
+        <h2 class="h02">Data Set Publication</h2>
+        <div class="contents">
+            <section>
+                <h3 class="h03">Table of Contents</h3>
+                <ol>
+                    <li><a href="#use" target="_blank">How to Use the Knowledge Graph and Videos</a></li>
+                    <li><a href="#schema" target="_blank">Structure of the Knowledge Graph</a></li>
+                    <li><a href="#query" target="_blank">Sample SPARQL Queries</a></li>
+                </ol>
+            </section>
+            <section>
+                <h3 class="h03" id="use">How to Use the Knowledge Graph and Videos</h3>
+                <h4 class="h04">GitHub</h4>
+                <p>The knowledge graph is published in Resource Description Framework (RDF) format on GitHub. Corresponding videos are also available.</p>
+                <p><a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF/tree/kgrc4si" target="_blank">https://github.com/KnowledgeGraphJapan/KGRC-RDF/tree/kgrc4si</a></p>
+                <p>The Knowledge Graph is available in TTL format and in N-TRIPLE format for easy handling as a machine learning data set.</p>
+                <p>Videos: <a href="https://kgrc4si.home.kg/Movie/" target="_blank">https://kgrc4si.home.kg/Movie/</a> or in zip format:<a href="https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags" target="_blank">https://github.com/KnowledgeGraphJapan/KGRC-RDF/tags</a></p>
+                <p>Scene graph data for video is also available on Github in the ActionGenome format.</p>
+
+                <h4 class="h04">Viewing the Knowledge Graph in a Web Browser</h4>
+                <p class="mb2">You can view the knowledge graph in a web browser. It is available at <a href="https://kgrc4si.home.kg:7200/" target="_blank">https://kgrc4si.home.kg:7200/</a>, please refer to the GraphDB <a href="https://graphdb.ontotext.com/documentation/10.0/workbench.html" target="_blank">manual</a> for more details.</p>
+                <h4 class="h04">SPARQL Endpoint</h4>
+                <p class="mb2">We provide an endpoint for searching the knowledge graph using SPARQL queries. Please refrain from making a large number of inquiries that could overload the server.
+                    <b>Using as an API</b>
+                    Parameters: query={URL-encoded SPARQL query}, format={data format (json, xml, csv, ...)}
+                <ol>
+                    <li><a href="https://kgrc4si.home.kg:7200/repositories/KGRC4SIv05" target="_blank">https://kgrc4si.ml:7200/repositories/KGRC4SIv04</a></li>
+                </ol>
+                </p>
+
+                <h4 class="h04">Example Using Python (rdflib) in Google Colaboratory</h4>
+                <p class="mb2">Here is an example of using the above SPARQL endpoint with a program (Python) in Google Colab. The same applies to your own Jupyter notebook.
+                <ol>
+                    <li>
+                        <a href="https://colab.research.google.com/github/takanori-ugai/Challenge/blob/master/Sample0.ipynb" target="_blank">Execution Example Using Python (rdflib)</a>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h3 class="h03" id="schema">Structure of the Knowledge Graph</h3>
+
+                <p>The knowledge graph provided for the reasoning challenge is expressed with "events" and corresponding "actions," "main objects," "target objects," "agents," "relationships between scenes (nextEvent)," "times," etc. Please see the slides below for more details.</p>
+                <div class="png">
+                    <ul>
+                        <li>Schema (correspondence with video)<BR><img src="SWRLExample/Slide1.PNG" alt="Slide 1"/></li>
+                        <li>Example of Knowledge Graph<BR><img src="SWRLExample/Slide2.PNG" alt="Slide 2"/></li>
+                        <li><img src="SWRLExample/Slide3.jpg" alt="Slide 3"/></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="h03" id="query">Sample SPARQL Queries</h3>
+                <h4 class="h04">Retrieve events during the activity of "browsing the internet"</h4>
+                <pre><code class="prettyprint lang-sparql">
+PREFIX ex: <http://kgrc4si.home.kg/virtualhome2kg/instance/>
+PREFIX vh2kg: <http://kgrc4si.home.kg/virtualhome2kg/ontology/>
+SELECT DISTINCT * WHERE {
+  ex:browse_internet_scene1 vh2kg:hasEvent ?event .
+  ?event vh2kg:action ?action .
+}
+                </code></pre>
+                <h4 class="h04">Retrieve a list of activities</h4>
+                <pre><code class="prettyprint lang-sparql">
+PREFIX ex: <http://kgrc4si.home.kg/virtualhome2kg/instance/>
+PREFIX vh2kg: <http://kgrc4si.home.kg/virtualhome2kg/ontology/>
+SELECT DISTINCT * WHERE {
+  ?activity vh2kg:virtualHome ex:scene1 .
+}
+                </code></pre>
+            </section>
+        </div>
+    </div>
+</main>
+
+
+<footer id="footer"><a href="#wrapper" id="page-top"></a>
+    <div class="inner">
+        <div class="foot-add">
+            <p class="logo"><a href="index_ja.html"><img src="assets/img/common/logo.png"
+                                                         alt="ナレッジグラフ推論チャレンジ"/></a></p>
+            <blockquote>
+                <p class="cop-name">kgrc@knowledge-graph.jp</p>
+            </blockquote>
+        </div>
+        <div class="foot-nav">
+            <ul class="gnav-ul">
+                <li>
+                    <a href="application.html">Application<br/>Guidelines</a>
+                </li>
+                <li>
+                    <a href="rdf.html">Knowledge Graph</a>
+                </li>
+                <li>
+                    <a href="sample.html">Reference<br/>Approach</a>
+                </li>
+                <li>
+                    <a href="reference.html">For Beginners</a>
+                </li>
+                <li>
+                    <a href="history.html">Past Events</a>
+                </li>
+                <li>
+                    <a href="index_ja.html">日本語</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <small>Copyright</small></footer>
+
+<!-- .wrapper -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="assets/vendor/js/jquery-3.4.1.min.js"></script>
+<script src="assets/vendor/js/jquery-migrate-3.1.0.min.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/common.js"></script>
+<script type="text/javascript" src="assets/js/smoothScrollEx.js"></script>
+<!-- InstanceBeginEditable name="jvs" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

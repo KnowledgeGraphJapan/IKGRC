@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/jp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>応募要領 | ナレッジグラフ推論チャレンジ</title>
+    <!-- InstanceEndEditable -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap&subset=japanese"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceParam name="pageId" type="text" value="application" -->
+    <!-- InstanceParam name="indexId" type="text" value="" -->
+</head>
+<body id="application">
+<!-- InstanceBeginEditable name="bodyTop" --><!-- InstanceEndEditable -->
+<!-- サイドオープン時メインコンテンツを覆う -->
+<div class="overlay" id="js__overlay"></div>
+<!-- メインコンテンツ -->
+<div id="wrapper" class="wrapper"><!-- InstanceBeginEditable name="pageImg" --><!-- InstanceEndEditable -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-logo"><a href="index.html"> <img class="rpimg" src="../assets/img/common/logo.png"
+                                                                alt="Knowlege Graph Reasoning Challenge"/> </a></div>
+            <!-- 開閉用　ボタン -->
+            <div class="nav_toggle" id="js__sideMenuBtn">
+                <div class="ellipsis-v"><span class="point top"></span> <span class="point mid"></span> <span
+                        class="point bot"></span></div>
+            </div>
+            <!-- グローバルナビゲーション -->
+            <nav class="gnav" id="js_gnav">
+                <ul class="gnav-ul">
+                    <li>
+                        <a href="application.html">Application<br/>Guidelines</a>
+                    </li>
+                    <li>
+                        <a href="rdf.html">Knowledge Graph</a>
+                    </li>
+                    <li>
+                        <a href="history.html">Past Events</a>
+                    </li>
+                    <li>
+                        <a href="index_ja.html">日本語</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- .headerInner -->
+    </header>
+</div>
+<!-- InstanceBeginEditable name="toppage" -->
+
+<!-- InstanceEndEditable -->
+<main class="main-contents" id="main-contents"> <!-- InstanceBeginEditable name="content" -->
+    <div class="key-common">
+        <div class="key-common-inner">
+            <h1 class="ttl">Application Guidelines</h1>
+        </div>
+    </div>
+    <div class="inner">
+        <h2 class="h02">Application Guidelines</h2>
+        <div class="contents">
+            <section>
+                <h3 class="h03">Application Deadline and Final Presentation</h3>
+                <ul>
+                    <li>Application Deadline: December 20th, 0:00</li>
+                    <li>Final Review Meeting and Awards Ceremony (Online): February 9th, 8:00 onwards</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="h03">Overall Goal of the Challenge</h3>
+                <p>The goal of this challenge is to realize an AI system that can answer questions with explanations.</p>
+            </section>
+            <section>
+                <h3 class="h03">Challenge Tasks</h3>
+                <div style="border: 3px double;">
+                    - There are 8 questions set for each of the two tasks, but there is no specific order to tackle them.<br>
+                    - Participants are welcome to work on the tasks and problems they are interested in and submit their completed works.<br>
+                    - Submissions are welcome even if they are only a part of a task or a partial effort.<br>
+                </div>
+                <ul class="ul01">
+                    <li>- Task 1: Measure actions from a complete knowledge graph or scene graph
+                        <ul class="ul02">
+                            <li>Answer Q1 to Q8 for each scenario provided in the scenario list.</li>
+                            <li>The format for each answer is defined in JSON.</li>
+                            <li>Posting the JSON to the answer API will calculate and return a score.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="ul01">
+                    <li>- Task 2: Measure actions from an incomplete knowledge graph or scene graph
+                        <ul class="ul02">
+                            <li>Similar to Task 1, answer Q1 to Q8 for each scenario provided.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="ul01">
+                    <li>- Common Questions for Both Tasks
+                        <ul class="ul02">
+                            <li>Q1: How many times did you enter each room?</li>
+                            <li>Q2: How many times did you perform each action?</li>
+                            <li>Q3: What action did you take after entering the kitchen?</li>
+                            <li>Q4: What action did you take before entering the kitchen for the first time?</li>
+                            <li>Q5: When, where, and what did you pick up?</li>
+                            <li>Q6: What are you doing 10 seconds after the start?</li>
+                            <li>Q7: Extract the relationship between objects at the initial state and after 10 seconds.</li>
+                            <li>Q8: Extract changes in the state of objects from the initial state to 20 seconds later.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="h03">Conditions for Performing Tasks</h3>
+                <ul class="ul01">
+                    <li>- It is possible to independently expand the knowledge graph (e.g., adding common sense knowledge).</li>
+                    <li>- If there are issues with the provided data, pull requests are acceptable.</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="h03">Submissions</h3>
+                <p><a href="./file/Application.pdf">Submit a paper of at least 2 pages and no more than 8 pages.</a> The paper should include the following information:</p>
+                <ul class="ul01">
+                    <li>2. The task you tackled.</li>
+                    <li>3. Explanation of the reasoning process.</li>
+                    <li>4. The execution program.</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="h03">Evaluation Criteria (Provisional)</h3>
+                <ul class="ul01">
+                    <li>- Common for all tasks: Accuracy rate, technical ingenuity, method of inference, expanded knowledge.</li>
+                </ul>
+                <ul class="ul01">
+                    <li>- Evaluation based on the paper submitted in advance and the presentation on the day.</li>
+                </ul>
+                <ul class="ul03">
+                    <li><span class="h04">* It is planned to conduct a peer review on the day of the event. At least one member from each team should participate in the review meeting (to be held on February 9, 2024). Presentations will be limited to teams whose papers have been accepted.</span></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- / .inner -->
+    <!-- InstanceEndEditable --> </main>
+
+<footer id="footer"><a href="#wrapper" id="page-top"></a>
+    <div class="inner">
+        <div class="foot-add">
+            <p class="logo"><a href="index_ja.html"><img src="../assets/img/common/logo.png"
+                                                         alt="ナレッジグラフ推論チャレンジ"/></a></p>
+            <blockquote>
+                <p class="cop-name">kgrc@knowledge-graph.jp</p>
+            </blockquote>
+        </div>
+        <div class="foot-nav">
+            <ul class="gnav-ul">
+                <li>
+                    <a href="application.html">Application<br/>Guidelines</a>
+                </li>
+                <li>
+                    <a href="rdf.html">Knowledge Graph</a>
+                </li>
+                <li>
+                    <a href="sample.html">Reference<br/>Approach</a>
+                </li>
+                <li>
+                    <a href="reference.html">For Beginners</a>
+                </li>
+                <li>
+                    <a href="history.html">Past Events</a>
+                </li>
+                <li>
+                    <a href="index_ja.html">日本語</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <small>Copyright</small></footer>
+
+<!-- .wrapper -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="assets/vendor/js/jquery-3.4.1.min.js"></script>
+<script src="assets/vendor/js/jquery-migrate-3.1.0.min.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/common.js"></script>
+<script type="text/javascript" src="assets/js/smoothScrollEx.js"></script>
+<!-- InstanceBeginEditable name="jvs" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
