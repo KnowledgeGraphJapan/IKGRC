@@ -544,7 +544,7 @@ png{
     padding: 3em 4%; }
     @media print, screen and (min-width: 769px) {
       .main-contents .inner {
-        max-width: 870px;
+        max-width: 1024px;
         padding: 60px 20px;
         margin: 0 auto; }
         .main-contents .inner img {
