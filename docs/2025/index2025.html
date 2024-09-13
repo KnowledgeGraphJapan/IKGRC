@@ -7,11 +7,64 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class=”container”>
-  <div class=”row”>
-    <div class=”col-md-6”>コンテンツ</div>
-    <div class=”col-md-6”>コンテンツ</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-6">コンテンツ</div>
+    <div class="col-6">コンテンツ</div>
   </div>
+</div>
+<div class="container">
+  <h1 class="h2">Bootstrap v5 Bug Report</h1>
+  <p>Have a bug report to share with us? Use this template to reproduce an isolated test case so we can more easily identify the problem and hopefully find a fix.</p>
+  <p>
+    <a class="btn btn-primary" href="https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#bug-reports" rel="noopener noreferrer" target="_blank">Read bug report guidelines</a>
+  </p>
+  <p>Once you're set, replace the contents of this page and share the link with us in a <a href="https://github.com/twbs/bootstrap/issues/new/choose" rel="noopener noreferrer" target="_blank">new issue</a>.</p>
+  <p>Thanks! <span class="text-danger">♥</span></p>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-6">
+      2 of 3 (wider)
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-5">
+      2 of 3 (wider)
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6">コンテンツ</div>
+  <div class="col-6">コンテンツ</div>
+</div>
 </div>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
